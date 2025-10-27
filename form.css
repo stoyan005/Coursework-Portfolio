@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Jua', sans-serif;
 }
 
 body {
-	background: #f4f4f4;
+	background: #dee2e6;
+	font-family: 'Jua', sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 nav {
-	position: fixed;
 	width: 100%;
 	background: #3f3e3e;
 	display: flex;
@@ -20,7 +22,6 @@ nav {
 	justify-content: space-between;
 	padding: 20px 40px;
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-	z-index: 1000;
 	border-bottom: 3px solid #1956da;
 }
 
@@ -43,14 +44,10 @@ nav {
 	text-decoration: none;
 	padding: 10px;
 	font-size: 1.2rem;
-	font-weight: bold;
-	color: #cfcfcf;
+	font-weight: 500;
+	color: #ffffff;
 	border-radius: 15px;
 	transition: color 0.3s ease;
-}
-
-.navbar li a:hover {
-	color: #96aad6;
 }
 
 .navbar li a::after {
@@ -58,7 +55,7 @@ nav {
 	position: absolute;
 	left: 0;
 	width: 0;
-	height: 2px;
+	height: 3px;
 	bottom: 0px;
 	background-color: #1956da;
 	transition: width 0.3s ease;
@@ -66,4 +63,112 @@ nav {
 
 .navbar li a:hover::after {
 	width: 100%;
+}
+
+.form_container {
+	background: #ffffff;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+	border-top: 5px solid #1956da;
+	max-width: 650px;
+	width: 100%;
+	margin: 100px auto;
+}
+
+.form_container h1 {
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #000000;
+	margin-bottom: 2rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+label {
+	font-weight: bold;
+	font-size: 1rem;
+	color: #000000;
+}
+
+input,
+textarea {
+	padding: 1rem 0.8rem;
+	border: 2px solid #cfcfcf;
+	border-radius: 10px;
+	font-size: 1rem;
+	color: #000000;
+	background: #fafafa;
+	transition: all 0.2s ease;
+}
+
+textarea {
+	resize: none;
+	height: 120px;
+}
+
+.submit-button {
+	background: #1956da;
+	color: #ffffff;
+	border: none;
+	border-radius: 10px;
+	padding: 1rem;
+	font-size: 1.25rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+	background-color: #0e3a9c;
+	transform: scale(1.03);
+}
+
+.note {
+	text-align: center;
+	color: #000000;
+	font-size: 1.25rem;
+	font-weight: bold;
+	margin-top: 1rem;
+}
+
+@media (max-width: 1024px) {
+	.form_container {
+		max-width: 75%;
+		margin: 60px auto;
+		padding: 1.5rem;
+	}
+
+	.form_container h1 {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	form {
+		gap: 1rem;
+	}
+
+	label {
+		font-size: 1rem;
+	}
+
+	input,
+	textarea {
+		padding: 1rem 0.7rem;
+		font-size: 0.95rem;
+	}
+
+	.submit-button {
+		font-size: 1.25rem;
+		padding: 0.8rem;
+	}
+
+	.note {
+		font-size: 1.1rem;
+	}
 }
