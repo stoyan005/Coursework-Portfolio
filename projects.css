@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
+/* ! THIS IS THE * */
 * {
 	margin: 0;
 	padding: 0;
@@ -7,13 +8,7 @@
 	font-family: 'Jua', sans-serif;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Jua', sans-serif;
-}
-
+/* ! THIS IS THE BODY */
 body {
 	background: #dee2e6;
 	font-family: 'Jua', sans-serif;
@@ -21,6 +16,7 @@ body {
 	padding: 0;
 }
 
+/* ! THIS IS THE NAVBAR */
 nav {
 	width: 100%;
 	background: #3f3e3e;
@@ -73,52 +69,60 @@ nav {
 	width: 100%;
 }
 
-.project_container1,
-.project_container2 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 50px;
-}
-
-.project1,
-.project2 {
-	border-top: 5px solid #1956da;
-	width: 800px;
-	padding: 20px;
-	border-radius: 10px;
-	background: #ffffff;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-	text-align: center;
+/* ! THIS IS THE PROJECT CARDS */
+.project_grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	padding: 3rem;
 	box-sizing: border-box;
 }
 
-.project1 img,
-.project2 img {
-	width: 750px;
+.project_card {
+	border-top: 5px solid #1956da;
+	border-radius: 10px;
+	background: #ffffff;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+	padding: 1rem;
+	box-sizing: border-box;
+	transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project_card:hover {
+	border-color: #0e3a9c;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.project_image {
+	display: flex;
+	justify-content: center;
+}
+
+.project_card img {
+	width: 800px;
+	max-width: 100%;
 	height: 300px;
 	border-radius: 10px;
-	margin-bottom: 20px;
+	margin: 1rem 0;
+	object-fit: cover;
 }
 
-.project1 h2,
-.project2 h2 {
+.project_card h2 {
+	text-align: center;
 	font-size: 2rem;
-	margin-bottom: 10px;
 }
 
-.project1 p,
-.project2 p {
-	margin: 0;
-	font-size: 1.1rem;
+.project_card p {
+	font-size: 1.25rem;
 	line-height: 1.5;
+	margin: 5px;
 }
 
 .project_button {
 	display: flex;
 	justify-content: center;
-	margin-top: 20px;
 	max-width: 200px;
+	margin-top: 20px;
 	padding: 10px 20px;
 	text-decoration: none;
 	font-size: 1.25rem;
@@ -133,20 +137,11 @@ nav {
 	transform: scale(1.03);
 }
 
-@media (max-width: 1024px) {
-	.project1,
-	.project2 {
-		width: 90%;
-		padding: 18px;
-	}
-
-	.project1 img,
-	.project2 img {
-		width: 100%;
-		height: auto;
-	}
-
-	.project_button {
-		display: inline-block;
+@media (max-width: 768px) {
+	.project_grid {
+		grid-template-columns: 1fr;
+		gap: 30px;
+		padding: 20px;
+		margin-bottom: 20px;
 	}
 }
