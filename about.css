@@ -34,6 +34,7 @@ nav {
 	font-weight: 700;
 	color: #ffffff;
 	letter-spacing: 1px;
+	animation: floatInLeft 0.8s ease-out forwards;
 }
 
 .navbar ul {
@@ -41,6 +42,7 @@ nav {
 	align-items: center;
 	list-style-type: none;
 	gap: 2rem;
+	animation: floatInRight 0.8s ease-out forwards;
 }
 
 .navbar li a {
@@ -67,4 +69,28 @@ nav {
 
 .navbar li a:hover::after {
 	width: 100%;
+}
+
+@keyframes floatInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes floatInRight {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }

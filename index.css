@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Jua', sans-serif;
 }
 
 body {
 	background: #dee2e6;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Jua', sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -34,6 +34,7 @@ nav {
 	font-weight: 700;
 	color: #ffffff;
 	letter-spacing: 1px;
+	animation: floatInLeft 0.8s ease-out forwards;
 }
 
 .navbar ul {
@@ -41,6 +42,7 @@ nav {
 	align-items: center;
 	list-style-type: none;
 	gap: 2rem;
+	animation: floatInRight 0.8s ease-out forwards;
 }
 
 .navbar li a {
@@ -67,4 +69,101 @@ nav {
 
 .navbar li a:hover::after {
 	width: 100%;
+}
+
+/* ! THIS IS FOR THE LEFT-SIDE CONTAINER */
+.container_1 {
+	display: flex;
+	justify-content: space-between;
+	height: 100vh;
+}
+
+.left-side,
+.right-side {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 50%;
+}
+
+.intro,
+.uni {
+	font-size: 2.5rem;
+	font-weight: 500;
+	color: #000000;
+}
+
+.intro h1,
+.uni h1 {
+	font-size: 3rem;
+	margin: 10px 0;
+}
+
+.intro h2,
+.uni h2 {
+	font-size: 1.5rem;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+}
+
+.icons-socials {
+	display: flex;
+	flex-direction: row;
+	gap: 3rem;
+	padding: 2rem;
+}
+
+.icons svg {
+	background-color: #000000;
+	color: #ffffff;
+	padding: 6px;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+}
+
+.icons svg:hover {
+	background-color: #ffffff;
+	color: #000000;
+	transform: scale(1.2) rotate(-3deg);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.icons-skills svg {
+	background-color: #000000;
+	color: #ffffff;
+	padding: 6px;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+}
+
+.icons-skills svg:hover {
+	transform: scale(1.2) rotate(-3deg);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ! THIS IS ANIMATION FOR BOTH CONTAINERS */
+@keyframes floatInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes floatInRight {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
