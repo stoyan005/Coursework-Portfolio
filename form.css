@@ -16,13 +16,17 @@ body {
 }
 
 nav {
-	width: 100%;
-	background: #3f3e3e;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #3f3e3e;
 	padding: 20px 40px;
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
 	border-bottom: 3px solid #1956da;
 }
 
@@ -38,18 +42,18 @@ nav {
 	display: flex;
 	align-items: center;
 	list-style-type: none;
-	gap: 2rem;
+	gap: 3rem;
 	animation: floatInRight 0.8s ease-out forwards;
 }
 
 .navbar li a {
 	position: relative;
+	display: inline-block;
 	text-decoration: none;
-	padding: 10px;
-	font-size: 1.2rem;
+	padding: 10px 0;
+	font-size: 1.25rem;
 	font-weight: 500;
 	color: #ffffff;
-	border-radius: 15px;
 	transition: color 0.3s ease;
 }
 
@@ -59,15 +63,28 @@ nav {
 	left: 0;
 	width: 0;
 	height: 3px;
-	bottom: 0px;
+	bottom: 0;
 	background-color: #1956da;
 	transition: width 0.3s ease;
+}
+
+.navbar li a:hover {
+	color: #007bff;
 }
 
 .navbar li a:hover::after {
 	width: 100%;
 }
 
+.navbar li a.active {
+	color: #007bff;
+}
+
+.navbar li a.active::after {
+	width: 100%;
+}
+
+/* ! THIS IS THE FORM CONTAINER */
 .form_container {
 	background: #ffffff;
 	padding: 2rem;
@@ -75,7 +92,7 @@ nav {
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 	border-top: 5px solid #1956da;
 	max-width: 650px;
-	margin: 100px auto;
+	margin: 150px auto 0;
 }
 
 .form_container h1 {
@@ -142,32 +159,13 @@ textarea {
 @media (max-width: 1024px) {
 	.form_container {
 		max-width: 75%;
-		margin: 60px auto;
+		margin: 150px auto 0;
 		padding: 1.5rem;
 	}
 
 	.form_container h1 {
 		font-size: 2rem;
 		margin-bottom: 1.5rem;
-	}
-
-	form {
-		gap: 1rem;
-	}
-
-	label {
-		font-size: 1rem;
-	}
-
-	input,
-	textarea {
-		padding: 1rem 0.7rem;
-		font-size: 0.95rem;
-	}
-
-	.submit-button {
-		font-size: 1.25rem;
-		padding: 0.8rem;
 	}
 
 	.note {
