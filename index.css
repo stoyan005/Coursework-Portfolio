@@ -154,6 +154,7 @@ nav {
 	color: #000000;
 }
 
+/* ! DROPDOWN MENU */
 #menu_toggle {
 	display: none;
 }
@@ -188,31 +189,6 @@ nav {
 	transform: translateY(-8px) rotate(-45deg);
 }
 
-/* ! THIS IS ANIMATION FOR BOTH CONTAINERS */
-@keyframes floatInLeft {
-	from {
-		opacity: 0;
-		transform: translateX(-50px);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes floatInRight {
-	from {
-		opacity: 0;
-		transform: translateX(50px);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
 /* ! THIS IS THE MEDIA QUERIES */
 @media (max-width: 768px) {
 	.container_1 {
@@ -245,5 +221,30 @@ nav {
 
 	#menu_toggle:checked ~ .navbar {
 		max-height: 400px;
+	}
+}
+
+/* ! THIS IS ANIMATION FOR BOTH CONTAINERS */
+@keyframes floatInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes floatInRight {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
 	}
 }

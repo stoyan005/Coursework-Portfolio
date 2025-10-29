@@ -86,6 +86,41 @@ nav {
 	width: 100%;
 }
 
+/* ! DROPDOWN MENU */
+#menu_toggle {
+	display: none;
+}
+
+.dropdown {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.dropdown span {
+	display: block;
+	height: 3px;
+	width: 100%;
+	background: #ffffff;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+}
+
+#menu_toggle:checked + .dropdown span:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+}
+
+#menu_toggle:checked + .dropdown span:nth-child(2) {
+	opacity: 0;
+}
+
+#menu_toggle:checked + .dropdown span:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+}
+
 /* ! THIS IS THE PROJECT CARDS */
 .project_grid {
 	display: grid;
@@ -174,7 +209,7 @@ nav {
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 	.project_card h2 {
 		font-size: 1.5rem;
 	}
@@ -182,6 +217,31 @@ nav {
 	.project_card p,
 	.project_button {
 		font-size: 1.25rem;
+	}
+
+	.dropdown {
+		display: flex;
+	}
+
+	.navbar {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: #3f3e3e;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.5s ease;
+	}
+
+	.navbar ul {
+		flex-direction: column;
+		padding: 1rem 0;
+		gap: 1rem;
+	}
+
+	#menu_toggle:checked ~ .navbar {
+		max-height: 400px;
 	}
 }
 
