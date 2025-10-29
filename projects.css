@@ -22,6 +22,7 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -128,6 +129,7 @@ nav {
 	grid-template-columns: repeat(2, minmax(300px, 800px));
 	gap: 3rem;
 	padding: 4rem;
+	padding-top: 8rem;
 	box-sizing: border-box;
 }
 
@@ -201,7 +203,7 @@ nav {
 	.project_grid {
 		grid-template-columns: 1fr;
 		gap: 2rem;
-		padding: 2rem;
+		padding: 6rem 2rem 2rem 2rem;
 	}
 
 	.project_card img {
@@ -245,6 +247,7 @@ nav {
 	}
 }
 
+/* ! THIS IS THE ANIMATIONS KEY FRAMES */
 @keyframes floatInLeft {
 	from {
 		opacity: 0;
