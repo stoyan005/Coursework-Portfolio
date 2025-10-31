@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
 /* ! THIS IS THE * */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Inter', sans-serif;
+	font-family: 'Jua', sans-serif;
 }
 
 /* ! THIS IS THE BODY */
 body {
 	background: #dee2e6;
-	font-family: 'Inter', sans-serif;
+	font-family: 'Jua', sans-serif;
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
@@ -34,18 +34,23 @@ nav {
 }
 
 .logo {
-	font-size: 1.25rem;
+	font-size: 1.75rem;
 	font-weight: 700;
 	color: #ffffff;
 	letter-spacing: 1px;
 	animation: floatInLeft 0.8s ease-out forwards;
 }
 
+.logo a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
 .navbar ul {
 	display: flex;
 	align-items: center;
 	list-style-type: none;
-	gap: 3rem;
+	gap: 5rem;
 	animation: floatInRight 0.8s ease-out forwards;
 }
 
@@ -54,7 +59,7 @@ nav {
 	display: inline-block;
 	text-decoration: none;
 	padding: 10px 0;
-	font-size: 1rem;
+	font-size: 1.25rem;
 	font-weight: 500;
 	color: #ffffff;
 	transition: color 0.3s ease;
