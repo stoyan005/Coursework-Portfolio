@@ -298,7 +298,8 @@ h2 {
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 	border-top: 5px solid #1956da;
 	max-width: 650px;
-	margin: 150px auto 0;
+	margin: 120px auto 50px;
+	animation: fadeInUp 1s ease forwards;
 }
 
 .form_container h1 {
@@ -339,6 +340,7 @@ textarea {
 }
 
 .submit-button {
+	font-family: 'Jua', sans-serif;
 	background: #1956da;
 	color: #ffffff;
 	border: none;
@@ -511,7 +513,7 @@ textarea {
 @media (max-width: 1024px) {
 	.form_container {
 		max-width: 75%;
-		margin: 150px auto 0;
+		margin: 100px auto 50px;
 		padding: 1.5rem;
 	}
 
