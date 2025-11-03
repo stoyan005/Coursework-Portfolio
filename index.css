@@ -323,6 +323,7 @@ label {
 
 input,
 textarea {
+	font-family: 'Jua', sans-serif;
 	padding: 1rem 0.8rem;
 	border: 2px solid #cfcfcf;
 	border-radius: 10px;
