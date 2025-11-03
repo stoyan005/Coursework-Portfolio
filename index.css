@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
+/* ! THIS IS THE * */
 * {
 	margin: 0;
 	padding: 0;
@@ -7,6 +8,7 @@
 	font-family: 'Jua', sans-serif;
 }
 
+/* ! THIS IS THE BODY */
 body {
 	background: #dee2e6;
 	font-family: 'Jua', sans-serif;
@@ -14,6 +16,7 @@ body {
 	padding: 0;
 }
 
+/* ! THIS IS THE NAVBAR */
 nav {
 	display: flex;
 	align-items: center;
@@ -350,6 +353,80 @@ textarea {
 	margin-top: 1rem;
 }
 
+/* ! THIS IS THE ABOUT SECTION */
+.about {
+	padding: 5rem 5rem;
+	text-align: center;
+}
+
+.about h2 {
+	font-size: 2.5rem;
+	color: #111;
+	margin-bottom: 2rem;
+}
+
+.about p {
+	max-width: 850px;
+	margin: 0 auto 5rem auto;
+	font-size: 1.25rem;
+	color: #555;
+}
+
+.about_cards {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 3rem;
+}
+
+.card {
+	flex: 1 1 250px;
+	background: #ffffff;
+	padding: 3rem;
+	border-radius: 10px;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ! THIS IS THE CONTACT SECTION */
+
+.contact {
+	padding: 5rem;
+	text-align: center;
+	background: #111111;
+	color: #ffffff;
+}
+
+.contact h2 {
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.contact p {
+	font-weight: bold;
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
+}
+
+.contact .footer_button {
+	background: #00aaff;
+}
+
+.footer_button:hover {
+	background: #0d78ad;
+}
+
+.footer_button {
+	display: inline-block;
+	padding: 1rem 2rem;
+	background: #111111;
+	color: #ffffff;
+	text-decoration: none;
+	border-radius: 50px;
+	transition: 0.5s;
+}
+
 /* ! THIS IS THE MEDIA QUERY */
 /* ! 1200px */
 @media (max-width: 1200px) {
@@ -522,6 +599,10 @@ textarea {
 		padding-top: 70px;
 	}
 
+	.container_1 {
+		padding-top: 250px;
+	}
+
 	.form_container {
 		margin: 50px auto;
 	}
@@ -565,78 +646,4 @@ textarea {
 		opacity: 1;
 		transform: translateY(0);
 	}
-}
-
-/* ! THIS IS THE ABOUT SECTION */
-.about {
-	padding: 5rem 5rem;
-	text-align: center;
-}
-
-.about h2 {
-	font-size: 2.5rem;
-	color: #111;
-	margin-bottom: 2rem;
-}
-
-.about p {
-	max-width: 850px;
-	margin: 0 auto 5rem auto;
-	font-size: 1.25rem;
-	color: #555;
-}
-
-.about_cards {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 3rem;
-}
-
-.card {
-	flex: 1 1 250px;
-	background: #ffffff;
-	padding: 3rem;
-	border-radius: 10px;
-	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* ! THIS IS THE CONTACT SECTION */
-
-.contact {
-	padding: 5rem;
-	text-align: center;
-	background: #111111;
-	color: #ffffff;
-}
-
-.contact h2 {
-	color: #ffffff;
-	font-weight: bold;
-	font-size: 2.5rem;
-	margin-bottom: 1rem;
-}
-
-.contact p {
-	font-weight: bold;
-	font-size: 1.25rem;
-	margin-bottom: 2rem;
-}
-
-.contact .footer_button {
-	background: #00aaff;
-}
-
-.footer_button:hover {
-	background: #0d78ad;
-}
-
-.footer_button {
-	display: inline-block;
-	padding: 1rem 2rem;
-	background: #111111;
-	color: #ffffff;
-	text-decoration: none;
-	border-radius: 50px;
-	transition: 0.5s;
 }
