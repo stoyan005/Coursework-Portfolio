@@ -621,12 +621,8 @@ textarea {
 }
 
 @media (max-width: 425px) {
-	body {
-		padding-top: 70px;
-	}
-
 	.container_1 {
-		padding-top: 70px;
+		padding-top: 150px;
 		height: 150vh;
 	}
 
