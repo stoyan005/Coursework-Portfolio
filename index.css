@@ -485,41 +485,14 @@ textarea {
 		gap: 2rem;
 		padding: 1rem 0;
 	}
-
-	.dropdown {
-		display: flex;
-	}
-
-	nav {
-		padding: 15px 20px;
-	}
-
-	.navbar {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		background: #3f3e3e;
-		max-height: 0;
-		overflow: hidden;
-		transition: max-height 0.5s ease;
-	}
-
-	.navbar ul {
-		flex-direction: column;
-		padding: 1rem 0;
-		gap: 1rem;
-	}
-
-	#menu_toggle:checked ~ .navbar {
-		max-height: 400px;
-		background-color: rgba(0, 0, 0, 0.5);
-		backdrop-filter: blur(5px);
-	}
 }
 
 /* ! 1024px */
 @media (max-width: 1024px) {
+	body {
+		padding-top: 70px;
+	}
+
 	.form_container {
 		max-width: 75%;
 		margin: 100px auto 50px;
