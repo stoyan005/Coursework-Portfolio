@@ -415,6 +415,25 @@ textarea {
 	transition: all 0.2s ease;
 }
 
+input:invalid,
+textarea:invalid {
+	border-color: #d17c7c;
+	box-shadow: 0 0 6px rgba(209, 124, 124, 0.5);
+}
+
+input:valid,
+textarea:valid {
+	border-color: #5c8b6a;
+	box-shadow: 0 0 6px rgba(107, 139, 92, 0.4);
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+	border-color: #1956da;
+	box-shadow: 0 0 6px rgba(25, 86, 218, 0.4);
+}
+
 textarea {
 	resize: none;
 	height: 120px;
